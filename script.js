@@ -7,49 +7,49 @@ const SOAPS = [
   {
     name: "Aloe Vera",
     benefit: "Deep hydration",
-    price: 199,
+    price: 99,
     img: "images/aloe.png",
     desc: "Deeply hydrates and soothes dry, irritated skin. Rich in natural aloe vera gel and nourishing plant oils."
   },
   {
     name: "Neem + Charcoal",
     benefit: "Antibacterial, detox",
-    price: 229,
+    price: 129,
     img: "images/neem-charcoal.png",
     desc: "Powerful antibacterial action from pure neem leaf. Activated charcoal draws out impurities from deep within pores."
   },
   {
     name: "Multani Mitti + Turmeric",
     benefit: "Brightening, cooling",
-    price: 219,
+    price: 129,
     img: "images/haldi.png",
     desc: "Fuller's earth absorbs excess oil and cools skin. Turmeric brightens and evens skin tone."
   },
   {
     name: "Coffee",
     benefit: "Natural exfoliation",
-    price: 199,
+    price: 109,
     img: "images/coffee.png",
     desc: "Finely ground coffee gently exfoliates dead skin cells, revealing smoother, brighter skin."
   },
   {
     name: "Coffee + Charcoal",
     benefit: "Deep detox",
-    price: 249,
+    price: 199,
     img: "images/coffee-charcoal.png",
     desc: "The ultimate detox bar. Coffee exfoliates while activated charcoal performs a deep pore cleanse."
   },
   {
     name: "Rose",
     benefit: "Soothing, aromatic",
-    price: 229,
+    price: 109,
     img: "images/rose.png",
     desc: "Infused with real rose petals and rose water. Soothes sensitive skin with a natural fragrance."
   },
   {
     name: "Multani Mitti",
     benefit: "Clarifying, balancing",
-    price: 199,
+    price: 99,
     img: "images/multani.png",
     desc: "Pure Fuller's earth balances oily skin, minimises pores, and leaves skin feeling refreshed."
   }
@@ -65,11 +65,6 @@ const REASONS = [
     icon: "🤲",
     title: "Handcrafted in Small Batches",
     desc: "Each bar is poured, cut, and cured by hand to ensure quality and freshness."
-  },
-  {
-    icon: "🌱",
-    title: "Cold-Process Method",
-    desc: "Preserves the natural glycerin and active properties of every herb for maximum benefit."
   },
   {
     icon: "✨",
@@ -106,7 +101,7 @@ const HAMPERS = [
     name: "The Classic Ritual",
     desc: "3 soaps of your choice — perfect for gifting or starting your herbal journey.",
     includes: "3 soaps of your choice",
-    price: 699,
+    price: 299,
     tag: "Most Popular",
     highlight: false
   },
@@ -114,7 +109,7 @@ const HAMPERS = [
     name: "The Glow Collection",
     desc: "Four handpicked soaps for a complete skincare ritual. Beautifully packaged.",
     includes: "4 soaps of your choice",
-    price: 999,
+    price: 399,
     tag: "Best Value",
     highlight: true
   },
@@ -122,7 +117,7 @@ const HAMPERS = [
     name: "Heritage Luxury Box",
     desc: "All 7 Soumya Glow soaps in our signature forest green gift box with gold ribbon.",
     includes: "All 7 soaps",
-    price: 1499,
+    price: 799,
     tag: "Complete Set",
     highlight: false
   },
@@ -130,7 +125,7 @@ const HAMPERS = [
     name: "Corporate Gifting Set",
     desc: "Minimum 10 boxes. Custom branding available. Perfect for Diwali & corporate events.",
     includes: "Min 10 boxes, customizable",
-    price: 799,
+    price: 699,
     tag: "Bulk Order",
     highlight: false,
     priceNote: "/box"
@@ -264,7 +259,7 @@ HAMPERS.forEach((h, i) => {
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ── Scroll Helpers ─────────────────────────────────────────── */
-function scrollTo(id) {
+function navTo(id) {
   document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -284,7 +279,7 @@ function toggleMenu() {
 
 function mobileNav(id) {
   toggleMenu();
-  setTimeout(() => scrollTo(id), 300);
+  setTimeout(() => navTo(id), 300);
 }
 
 /* ── Order Form (WhatsApp pre-fill) ─────────────────────────── */
