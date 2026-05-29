@@ -57,17 +57,14 @@ const SOAPS = [
 
 const REASONS = [
   {
-    icon: "🌿",
     title: "Pure Herbal Ingredients",
     desc: "Every bar is made with real herbs — no synthetic fragrances, no parabens, no SLS."
   },
   {
-    icon: "🤲",
     title: "Handcrafted in Small Batches",
     desc: "Each bar is poured, cut, and cured by hand to ensure quality and freshness."
   },
   {
-    icon: "✨",
     title: "No Harsh Chemicals",
     desc: "Free from sulfates, parabens, artificial colors, and synthetic preservatives. Safe for all skin types."
   }
@@ -190,7 +187,6 @@ REASONS.forEach((r, i) => {
   if (i) card.setAttribute('data-delay', i * 60);
 
   card.innerHTML = `
-    <div class="why-icon">${r.icon}</div>
     <h3 class="why-title">${r.title}</h3>
     <p class="why-desc">${r.desc}</p>
   `;
